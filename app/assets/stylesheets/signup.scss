@@ -1,25 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 .SignupForm {
   background: #ededed;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  .form-image {
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  .big-box {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    display: flex;
     width: 30%;
-    border-radius: 1em 1em 0 0;
-    height: 200px;
-  }
-  .form-box {
-    width: 30%;
-    background-color: white;
-    padding: 2em 1.5em;
-    border-radius: 0 0 1em 1em;
-    .actions {
-      width: 50%;
-      margin: 0 auto;
-      .button {
-        width: 100%;
+    flex-direction: column;
+    border-radius:1em;
+    .form-image {
+      width: 100%;
+      border-radius: 1em 1em 0 0;
+      height: 200px;
+      background: linear-gradient(to right, #FF4B2B, #FF416C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h2 {
+        font-weight: bold;
+        margin: 0;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 0;
+      }
+    }
+    .form-box {
+      width: 100%;
+      background-color: white;
+      padding: 2em 1.5em;
+      border-radius: 0 0 1em 1em;
+      .password-label {
+        font-size: 13px;
+      }
+      .select-input {
+        border: 1px solid red;
+        background-color: white;
+      }
+      .actions {
+        width: 50%;
+        margin: 0 auto;
+        .button {
+          width: 100%;
+          border-radius: 1em;
+          font-weight: bold;
+        }
       }
     }
   }

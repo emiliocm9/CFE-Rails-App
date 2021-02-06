@@ -15,5 +15,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "./signup.scss";
+@import "./errors.scss";
 
 * { margin:0; padding:0; box-sizing:border-box; }

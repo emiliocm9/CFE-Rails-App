@@ -30,4 +30,33 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "no puede estar vacio"
+            password:
+              blank: "no puede estar vacía"
+              too_short: "es muy corta (mínimo %{count} caracteres)"
+            password_confirmation:
+              blank: "Por favor confirme su contraseña"
+              confirmation: "no coincide"
+            username:
+              too_short: "debe ser de máximo 10 caracteres, y 5 caracteres mínimo"
+              too_long: "debe ser de máximo 10 caracteres, y 5 caracteres mínimo"
+              uniqueness: "ya existe"
+            status:
+              blank: "no puede estar vacío"
+    attributes:
+      user:
+        password: "La contraseña"
+        password_confirmation: "La confirmación de contraseña"
+        email: "El email"
+        name: "El nombre"
+        username: "El usuario"
+        phone: "El teléfono"
+        status: "El status"
+
+

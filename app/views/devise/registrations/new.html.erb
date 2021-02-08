@@ -4,18 +4,18 @@
       <h2 class="text-center text-light">Registrar usuario</h2>
       <p class="text-light">Llena los campos con la información del usuario</p>
     </div>
-    <%= render "devise/shared/error_messages", resource: resource %>
     <div class="form-box">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|%>
+      <%= render "devise/shared/error_messages", resource: resource %>
         <div class="row">
           <div class="col mb-3">
-            <%= f.label :teléfono %><br/>
+            <%= f.label :nombre %><br/>
             <%= f.text_field :name, class: "form-control", placeholder:"Nombre"%>
           </div>
 
-          <div class="col input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <%= f.text_field :username, class: "form-control", placeholder:"Usuario", aria: { label: 'Username', describedby: 'basic-addon1' } %>
+          <div class="col mb-3">
+            <%= f.label :usuario %><br/>
+            <%= f.text_field :username, class: "form-control", placeholder:"Usuario"%>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
           </div>
 
           <div class="col mb-3">
-            <%= f.label :status %><br/>
+            <%= f.label :status %>
             <%= f.select :status, options_for_select(['Ingresado', 'En proceso', 'En espera', 'Solventar', 'Requerimiento', 'Autorizado', 'Rechazado']),{ :prompt => "Selecciona un status"}, { :class => "form-select" } %>
           </div>
         </div>
@@ -57,6 +57,9 @@
           <%= f.submit "Registrar usuario", class:"btn btn-info button text-light text-uppercase"%>
         </div>
       <% end %>
+      <div class="w-100 d-flex justify-content-center mt-3">
+        <%= link_to "Cancelar", root_path, class:"btn text-danger" %>
+      </div>
       <%# <%= render "devise/shared/links" %>
     </div>
   </div>

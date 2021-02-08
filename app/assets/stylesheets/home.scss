@@ -1,0 +1,21 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.HomeIndex {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  .users-list-box {
+    width: 70%;
+    margin: 0 auto;
+    .table-title {
+      font-family: 'Montserrat', sans-serif;
+    }
+    table {
+      box-shadow: 0 0 5px #ddd
+    }
+    .user-list {
+      width: 100%;
+    }
+  }
+}

@@ -1,11 +1,15 @@
 #error_explanation {
   text-align: center;
+  border: 1px solid red;
+  border-radius: 1em;
+  margin-bottom: 10px;
   h2 {
+    display: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
   ul {
-    list-style: none;
-    font-size: 10px;
+    font-size: 14px;
+    color: red;
   }
 }

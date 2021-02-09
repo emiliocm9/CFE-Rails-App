@@ -1,11 +1,21 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!, except: [:registrations]
+  helper_method :current_user
+  helper_method :logged_in?
+  helper_method :logged_in_user
 
-  protected
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :name, :status, :password, :password_confirmation, :email, :phone])
+  def logged_in?
+    !current_user.nil?
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    redirect_to root_path
+    flash[:danger] = 'Please log in or create a new user.'
   end
 end
 

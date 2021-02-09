@@ -1,0 +1,45 @@
+
+<div class="HomeIndex"> 
+  <nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-end">
+        <%= link_to "Registrar nuevo usuario", new_user_path, class:"btn btn-outline-primary me-2" %>
+    </form>
+  </nav>
+  <div class="users-list-box mt-5">
+    <div>
+      <h2 class="table-title">Usuarios registrados</h2>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col" class="text-center">ID</th>
+            <th scope="col" class="text-center">Nombre</th>
+            <th scope="col" class="text-center">Usuario</th>
+            <th scope="col" class="text-center">Correo electrónico</th>
+            <th scope="col" class="text-center">Teléfono</th>
+            <th scope="col" class="text-center">Status</th>
+            <th scope="col" class="text-center">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%@users.each do |user|%>
+            <tr>
+              <td class="text-center"><%= user.id%></td>
+              <td class="text-center"><%= user.name%></td>
+              <td class="text-center"><%= user.username%></td>
+              <td class="text-center"><%= user.email%></td>
+              <td class="text-center"><%= user.phone%></td>
+              <td class="text-center"><%= user.status%>  <%= link_to "Editar status", edit_user_path(user), class:'btn btn-outline-info' %></td>
+              <td class="text-center">
+              <%= link_to user, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="far fa-trash-alt text-danger"></i>
+              <% end %>
+              </td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

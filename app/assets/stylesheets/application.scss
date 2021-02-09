@@ -17,6 +17,18 @@
 @import "./signup.scss";
 @import "./errors.scss";
 @import "./home.scss";
+@import "./sessions.scss";
+@import "./usersHome.scss";
+@import "./showUser.scss";
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * { margin:0; padding:0; box-sizing:border-box; }
+
+.font-montse {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}

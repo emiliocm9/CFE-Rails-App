@@ -1,0 +1,33 @@
+<%= notice_helper %>
+<div class="SignupForm">
+  <div class="big-box">
+    <div class="form-image">
+      <h2 class="text-center text-light">Iniciar sesión</h2>
+      <p class="text-light">Inicia sesión para ver tu status</p>
+    </div>
+    <div class="form-box">
+      <%= form_tag sessions_path do |form| %>
+        <div class="row">
+          <div class="col mb-3">
+            <%= label_tag :usuario %><br/>
+            <%= text_field_tag :username, nil, placeholder:"Usuario", class: "form-control"%>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mb-3">
+            <%= label_tag :contraseña %>
+            <%= password_field_tag  :password, nil, placeholder:"Escribe tu contraseña", class:"form-control" %>
+          </div>
+        </div>
+
+        <div class="actions mt-2">
+          <%= submit_tag "Inicia Sesión", class:"btn btn-info button text-light text-uppercase"%>
+        </div>
+      <% end %>
+      <div class="w-100 d-flex justify-content-center mt-3">
+        <%= link_to "Cancelar", 'home', class:"btn text-danger" %>
+      </div>
+    </div>
+  </div>
+</div>

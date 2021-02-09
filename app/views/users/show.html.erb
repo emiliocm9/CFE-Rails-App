@@ -95,7 +95,10 @@
             </div>
         </div>
     </footer>
-</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    <div class="logout-button-box">
+      <%= link_to logout_path(@user), method: :delete do %>
+        <button class="btn btn-outline-danger">Cerrar sesión</button>
+      <% end %>
+    </div>
+</div>

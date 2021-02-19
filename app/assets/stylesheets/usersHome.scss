@@ -124,6 +124,8 @@
   .misionScreen {
     flex-wrap: wrap;
     width: 100%;
+    background-color: skyblue;
+    color: white;
     justify-content: space-around;
     margin: 5em 0;
     .icon {
@@ -148,6 +150,8 @@
   .services-header {
     padding: 5em 5em;
     justify-content: space-around;
+    background-color: skyblue;
+    color: white;
     .soluciones {
       width: 500px;
     }

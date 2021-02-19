@@ -29,7 +29,7 @@
       border-radius: 30px;
       padding: 15px 25px;
       font-size: 22px;
-      background-color: #FF4000;
+      background-color: slateblue;
       border: none;
       border-color: #FF4000;
       font-family: 'Montserrat', sans-serif;
@@ -68,12 +68,102 @@
     }
   }
 
+  /* VIDEOS SECTION */
+  .video-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3em 0;
+  }
+  .video-background {
+    margin: 0 auto;
+    width: auto; 
+    height: auto;
+  }
+  #video_player { 
+    display: table; line-height: 0;
+    font-size: 0; background: #000;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  #video_container { 
+    position: relative;
+  }
+  #video_player div, #video_player figcaption { 
+    display: table-cell;
+    vertical-align: top; 
+  }
+  #video_container video { 
+    position: absolute; 
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  #video_player figcaption { width: 25%; }
+  #video_player figcaption a { display: block; }
+  #video_player figcaption a { 
+    opacity: .5;
+    transition: 1s opacity; 
+  }
+  #video_player figcaption a img, figure video { 
+    width: 100%; height: auto; 
+  }
+  #video_player figcaption a.currentvid, #video_player figcaption a:hover, #video_player figcaption a:focus { opacity: 1; }
+  @media (max-width: 700px) {
+    #video_player video, #video_player figcaption { 
+      display: table-row; 
+    }
+  #video_container { padding-top: 56.25%; }
+  #video_player figcaption a { 
+    display: inline-block; width: 33.33%; 
+  }
+  }
+
+  /* Mision y Vision */
+  .misionScreen {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin: 5em 0;
+    .icon {
+      font-size: 80px;
+      margin: 0.5em 0;
+      color: teal;
+    }
+  }
+
+  .mision-box {
+    width: 500px;
+  }
 
   ul {
     margin: 0px;
     padding: 0px;
-}
-.footer-section {
+  }
+
+
+  /* SERVICES */
+
+  .services-header {
+    padding: 5em 5em;
+    justify-content: space-around;
+    .soluciones {
+      width: 500px;
+    }
+    .lista {
+      width: 500px;
+    }
+  }
+
+  .article-box {
+    width: 400px;
+    padding: 3em 0;
+  }
+
+
+
+  .footer-section {
   background: #151414;
   position: relative;
 }
@@ -171,7 +261,6 @@
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 12px;
 }

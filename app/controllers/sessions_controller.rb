@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to home_path
+    redirect_to 'home', notice: 'La sesión se ha cerrado'
   end
 end

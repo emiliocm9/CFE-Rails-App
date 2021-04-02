@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: tramites-energeticos_production
-  username: tramites-energeticos
-  password: <%= ENV['TRAMITES-ENERGETICOS_DATABASE_PASSWORD'] %>
+  database: tramites_prod
+  username: tramites
+  password: Tramites123@
   url: <%= ENV['DATABASE_URL'] %>

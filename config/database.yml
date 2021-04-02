@@ -52,3 +52,4 @@ production:
   database: tramites-energeticos_production
   username: tramites-energeticos
   password: <%= ENV['TRAMITES-ENERGETICOS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

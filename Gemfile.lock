@@ -144,7 +144,7 @@ GEM
     orm_adapter (0.5.0)
     popper_js (1.16.0)
     public_suffix (4.0.6)
-    puma (5.2.2)
+    puma (4.3.7)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -267,7 +267,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
-  puma
+  puma (~> 4.3.5)
   rails (~> 5.2.4, >= 5.2.4.4)
   sass-rails (~> 5.0)
   selenium-webdriver
